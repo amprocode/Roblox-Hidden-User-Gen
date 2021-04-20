@@ -10,7 +10,7 @@ def title(text):
     set_title(text)
 
 def namegen():
-    length = random.randint(4, 16)
+    length = random.randint(4, 20)
     letters = "il"
     return ''.join(random.choice(letters) for i in range(length))
 
