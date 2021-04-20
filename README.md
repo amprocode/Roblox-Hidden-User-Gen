@@ -6,5 +6,3 @@ Download it and run it, all usernames will be saved to a 'username.txt' file rea
 Whats to come?
 - Discord Webhook support
 - improve code
-
-Discord: (...)#4953
