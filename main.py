@@ -3,6 +3,7 @@ import random
 import os
 from colorama import Fore
 from console.utils import set_title
+from discordwebhook import Discord
 
 os.system('color')
 
@@ -11,7 +12,7 @@ def title(text):
 
 def namegen():
     length = random.randint(4, 20)
-    letters = "il"
+    letters = "Il"
     return ''.join(random.choice(letters) for i in range(length))
 
 title('Hidden User Gen By (...)#4953 | Tried: 0 | Taken: 0 | Available: 0')
@@ -33,6 +34,23 @@ if choice == '1':
             title('Hidden User Gen By (...)#4953 | Tried: ' + str(tried) + ' | Taken: ' + str(used) + ' | Available: ' + str(available))
             print(f'{Fore.GREEN}[+] ' + name + ' is available')
             open("usernames.txt", "a").write(name + '\n')
+            discord = Discord(url="https://discord.com/api/webhooks/123/abc")
+            discord.post(
+    embeds=[
+        {
+            "title": "Hidden User Gen",
+            "description": "Found A New User!",
+            "fields": [
+                {"name": "Username:", "value": name},
+            ],
+            "footer": {
+                "text": "By (...)#4953",
+                "icon_url": "https://cdn.discordapp.com/avatars/747719812054253568/7fc895c7e52f0e68b916476b40325923.png?size=256",
+            },
+        }
+    ],
+)
+
         else:
             tried = tried + 1
             used = used + 1
