@@ -20,7 +20,7 @@ title('Hidden User Gen By (...)#4953 | Tried: 0 | Taken: 0 | Available: 0')
 choice = input(f'{Fore.CYAN}[1] Start\n[2] Exit\n\n'f'{Fore.YELLOW}Choice: ')
 
 tried = 0
-used = 0
+taken = 0
 available = 0
 
 if choice == '1':
@@ -31,7 +31,7 @@ if choice == '1':
         if a.find('Id') == -1:
             tried = tried + 1
             available = available + 1
-            title('Hidden User Gen By (...)#4953 | Tried: ' + str(tried) + ' | Taken: ' + str(used) + ' | Available: ' + str(available))
+            title('Hidden User Gen By (...)#4953 | Tried: ' + str(tried) + ' | Taken: ' + str(taken) + ' | Available: ' + str(available))
             print(f'{Fore.GREEN}[+] ' + name + ' is available')
             open("usernames.txt", "a").write(name + '\n')
             discord = Discord(url="https://discord.com/api/webhooks/123/abc")
@@ -53,5 +53,5 @@ if choice == '1':
 
         else:
             tried = tried + 1
-            used = used + 1
-            title('Hidden User Gen By (...)#4953 | Tried: ' + str(tried) + ' | Taken: ' + str(used) + ' | Available: ' + str(available))
+            taken = taken + 1
+            title('Hidden User Gen By (...)#4953 | Tried: ' + str(tried) + ' | Taken: ' + str(taken) + ' | Available: ' + str(available))
