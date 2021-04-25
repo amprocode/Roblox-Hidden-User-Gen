@@ -5,7 +5,7 @@ Download it and run it, all usernames will be saved to a 'usernames.txt' file re
 
 🛠️Latest Update:🛠️
 - Added discord webhook support
-- To enable go to line 38 and change the webhook, if you dont want to enable webhook support just leave it as it is
+- To enable go to line 37 and change the webhook, if you dont want to enable webhook support just leave it as it is
 
 Whats to come?
 - Discord Webhook support ✅
